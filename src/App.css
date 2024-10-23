@@ -2,37 +2,93 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #f0f0f0; /* Off-white color for the header */
+  padding: 20px;
+  color: black; /* Change text color to black for better visibility */
+  position: relative; /* For dropdown positioning */
+}
+
+.display-control {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.display-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dropdown-menu {
+  background-color: white; /* Background color for the dropdown */
+  border: 1px solid #ccc; /* Border for the dropdown */
+  padding: 10px; /* Padding for the dropdown */
+  border-radius: 5px; /* Rounded corners */
+  position: absolute; /* Positioning the dropdown */
+  z-index: 1; /* Ensure it appears above other elements */
+  left: 20px; /* Adjust to position it better */
+  top: 60px; /* Position below the display control */
+}
+
+.form-control {
+  display: flex; /* Use flexbox for horizontal alignment */
+  align-items: center; /* Center vertically */
+  margin-bottom: 10px; /* Space between lines */
+}
+
+label {
+  margin-right: 10px; /* Space between label and select */
+  color: gray; /* Grey color for labels */
+}
+
+select {
+  width: 150px; /* Set a fixed width for select elements */
+  padding: 8px; /* Padding for the select element */
+  border: 1px solid #ccc; /* Border for the select element */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.kanban-board {
+  display: flex;
+  justify-content: space-around; /* Evenly distribute columns */
+  padding: 20px;
+}
+
+.kanban-column {
+  background-color: #f0f0f0; /* Background for each column */
+  width: 30%; /* Width of each column */
+  margin: 0 10px; /* Margin between columns */
+  border-radius: 5px; /* Rounded corners for columns */
+  padding: 10px; /* Padding inside the column */
+}
+
+.kanban-header {
+  font-weight: bold;
+  margin-bottom: 10px; /* Space below the header */
+  color: black; /* Change header text color to black */
+}
+
+.ticket-card {
+  background-color: white; /* Background color for ticket */
+  border: 1px solid #ccc; /* Border for ticket */
+  border-radius: 4px; /* Rounded corners */
+  padding: 10px; /* Padding for ticket */
+  margin-bottom: 10px; /* Space between tickets */
+  display: flex; /* Flexbox for internal layout */
+  flex-direction: column; /* Arrange children in a column */
+  justify-content: space-between; /* Space out children */
+  height: 150px; /* Fixed height for consistent card sizes */
+}
+
+.ticket-title {
+  font-weight: bold; /* Bold for ticket titles */
+  color: black; /* Ensure title color is black */
+  margin-bottom: 10px; /* Space between title and other content */
+}
+
+.ticket-status, .ticket-user, .ticket-priority {
+  color: black; /* Ensure text color is black for status, user, and priority */
+  margin-top: auto; /* Push status, user, and priority to the bottom */
 }
